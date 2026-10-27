@@ -32,10 +32,6 @@ resource "aws_s3_bucket_website_configuration" "bucket" {
   index_document {
     suffix = "index.html"
   }
-
-  error_document {
-    key = "error.html"
-  }
 }
 
 resource "aws_s3_bucket_acl" "bucket" {
