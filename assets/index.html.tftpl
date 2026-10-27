@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) HashiCorp, Inc.
+ SPDX-License-Identifier: MPL-2.0
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>${application_name} - ${upper(environment)}</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background-color: #f4f5f7;
+        color: #1f2328;
+        font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      main {
+        background-color: #ffffff;
+        border: 1px solid #d8dce0;
+        border-top: 6px solid #7b42bc;
+        border-radius: 4px;
+        padding: 40px 56px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        margin: 0 0 24px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #2e7d32;
+      }
+
+      p {
+        margin: 6px 0;
+        color: #57606a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>${application_name}</h1>
+      <h2>${upper(environment)} environment provisioned successfully</h2>
+      <p>Provisioned through HCP Terraform using an approved reusable module.</p>
+      <p>AWS region: ${region}</p>
+    </main>
+  </body>
+</html>
